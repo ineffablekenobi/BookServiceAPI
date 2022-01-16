@@ -1,2 +1,14 @@
 # BookServiceAPI
-Its a practice project. Trying to learn microservices.
+
+Microservice design.
+
+Clients :
+
+* Book Service
+* User Service
+
+
+Servers :
+
+* BookShopService
+
