@@ -1,8 +1,5 @@
-package com.ineffable.orderservice.DTO;
+package com.ineffable.bookshopservice.DTO;
 
-import com.ineffable.orderservice.Models.Orders;
-
-import java.util.ArrayList;
 import java.util.List;
 
 public class ProductWrapper {

@@ -1,5 +1,6 @@
 package com.ineffable.orderservice.Controllers;
 
+import com.ineffable.orderservice.DTO.OrderWrapper;
 import com.ineffable.orderservice.DTO.ProductWrapper;
 import com.ineffable.orderservice.Exceptions.OrderNotFoundException;
 import com.ineffable.orderservice.Models.Orders;
@@ -7,6 +8,7 @@ import com.ineffable.orderservice.Services.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -19,6 +21,9 @@ public class OrderController {
     @Autowired
     private ProductWrapper productWrapper;
 
+    @Autowired
+    private OrderWrapper orderWrapper;
+
 
 
     @PostMapping("/new/userid={userid}")
@@ -30,10 +35,10 @@ public class OrderController {
     }
 
     @GetMapping("/userid={userid}")
-    public ProductWrapper getByUserId(@PathVariable("userid")Long id){
-        List<Long> ids = orderService.getByUserId(id);
-        productWrapper.setProductIds(ids);
-        return productWrapper;
+    public OrderWrapper getByUserId(@PathVariable("userid")Long id){
+        List<Orders> orders = orderService.getByUserId(id);
+        orderWrapper.setOrdersList(orders);
+        return orderWrapper;
     }
 
     @GetMapping("/orderid={orderid}")

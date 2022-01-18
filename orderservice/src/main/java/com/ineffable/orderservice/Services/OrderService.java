@@ -7,6 +7,7 @@ import com.ineffable.orderservice.Repositories.OrderRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -28,7 +29,7 @@ public class OrderService {
     }
 
 
-    public List<Long> getByUserId(Long id) {
+    public List<Orders> getByUserId(Long id) {
         return orderRepo.findByUserId(id);
     }
 
