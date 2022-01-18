@@ -16,7 +16,7 @@ public class UserController {
     @Autowired
     private UserWrapper userWrapper;
 
-    @GetMapping("")
+    @GetMapping("/")
     public UserWrapper getAllUser(){
         userWrapper.setUserList(userService.getAll());
         return userWrapper;
