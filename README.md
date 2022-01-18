@@ -15,5 +15,5 @@ Servers :
 
 <div align = "centre">
   <a>
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="arch.png" alt="Project Architecture" width="100" height="80">
   </a>
