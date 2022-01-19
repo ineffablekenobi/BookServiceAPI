@@ -1,12 +1,9 @@
-package com.ineffable.bookshopservice.Controllers;
+package com.ineffable.bookshopgateway.Controllers;
 
+import com.ineffable.bookshopgateway.DTO.BookWrapper;
+import com.ineffable.bookshopgateway.Models.Book;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cloud.client.loadbalancer.LoadBalanced;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import com.ineffable.bookshopservice.Models.Book;
-import com.ineffable.bookshopservice.DTO.BookWrapper;
-import org.springframework.web.client.RestTemplate;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Mono;
 
@@ -17,7 +14,7 @@ public class bookController {
     @Autowired
     private WebClient.Builder webClientBuilder;
 
-    private final String url = "http://localhost:8082/books";
+    private final String url = "http://BOOK-SERVICE/books";
 
 
     @GetMapping("/")

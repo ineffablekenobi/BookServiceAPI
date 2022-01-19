@@ -1,6 +1,7 @@
-package com.ineffable.bookshopservice.DTO;
+package com.ineffable.bookshopgateway.DTO;
 
-import com.ineffable.bookshopservice.Models.Orders;
+
+import com.ineffable.bookshopgateway.Models.Orders;
 
 import java.util.List;
 

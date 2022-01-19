@@ -1,8 +1,7 @@
-package com.ineffable.bookshopservice.DTO;
+package com.ineffable.bookshopgateway.DTO;
 
 
-import com.ineffable.bookshopservice.Models.User;
-
+import com.ineffable.bookshopgateway.Models.User;
 import java.util.List;
 
 public class UserWrapper {

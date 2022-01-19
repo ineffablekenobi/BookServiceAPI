@@ -1,4 +1,4 @@
-package com.ineffable.bookshopservice.DTO;
+package com.ineffable.bookshopgateway.DTO;
 
 import java.util.List;
 

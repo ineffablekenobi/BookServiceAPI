@@ -1,4 +1,4 @@
-package com.ineffable.bookshopservice.Models;
+package com.ineffable.bookshopgateway.Models;
 
 public class Orders {
 

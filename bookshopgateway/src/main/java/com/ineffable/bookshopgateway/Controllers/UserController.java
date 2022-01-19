@@ -1,7 +1,7 @@
-package com.ineffable.bookshopservice.Controllers;
+package com.ineffable.bookshopgateway.Controllers;
 
-import com.ineffable.bookshopservice.DTO.UserWrapper;
-import com.ineffable.bookshopservice.Models.User;
+import com.ineffable.bookshopgateway.DTO.UserWrapper;
+import com.ineffable.bookshopgateway.Models.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.reactive.function.client.WebClient;
@@ -14,12 +14,12 @@ public class UserController {
     @Autowired
     private WebClient.Builder webClientBuilder;
 
-    private final String url = "http://localhost:8081/users";
+    private final String url = "http://user-service/users";
 
     @GetMapping("/")
     public UserWrapper getAllUser(){
 
-        return  webClientBuilder.build()
+        return webClientBuilder.build()
                 .get()
                 .uri(url + "/")
                 .retrieve()

@@ -1,18 +1,13 @@
-package com.ineffable.bookshopservice.Controllers;
+package com.ineffable.bookshopgateway.Controllers;
 
 
-
-import com.ineffable.bookshopservice.DTO.OrderWrapper;
-import com.ineffable.bookshopservice.DTO.ProductWrapper;
-import com.ineffable.bookshopservice.Models.Orders;
+import com.ineffable.bookshopgateway.DTO.OrderWrapper;
+import com.ineffable.bookshopgateway.DTO.ProductWrapper;
+import com.ineffable.bookshopgateway.Models.Orders;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.client.RestTemplate;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Mono;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("/order")
@@ -24,7 +19,7 @@ public class OrderController {
     @Autowired
     private ProductWrapper productWrapper;
 
-    private final String url = "http://localhost:8083/order";
+    private final String url = "http://orders-service/order";
 
     @GetMapping("/orderid={orderid}")
     public Orders getOrderById(@PathVariable("orderid")Long id) {
