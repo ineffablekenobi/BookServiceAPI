@@ -24,4 +24,4 @@ Microservice design.
 ## Possible Improvements
 * We should check if the give user is valid or product numbers are valid before creating an order. As this was a practice project, I skipped it.
 * Adding caching to the discovery server can greatly improve our performance
-* Add gateway Service
+* Use cloud gateway instead of manually calling the services
